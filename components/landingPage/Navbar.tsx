@@ -6,15 +6,23 @@ import { MobileNav, MobileNavHeader, MobileNavMenu, MobileNavToggle, Navbar, Nav
 export function NavbarLp() {
     const navItems = [
         {
-            name: "Features",
+            name: "Work",
             link: "#features",
         },
         {
-            name: "Pricing",
+            name: "Services",
             link: "#pricing",
         },
         {
-            name: "Contact",
+            name: "News & Insights",
+            link: "#contact",
+        },
+        {
+            name: "About ",
+            link: "#contact",
+        }, 
+        {
+            name: "Contact", 
             link: "#contact",
         },
     ];
@@ -78,7 +86,7 @@ export function NavbarLp() {
                     </MobileNavMenu>
                 </MobileNav>
             </Navbar>
-
+            <DummyContent />
             {/* Navbar */}
         </div>
     );
