@@ -86,8 +86,8 @@ export function NavbarLp() {
                     </MobileNavMenu>
                 </MobileNav>
             </Navbar>
-            <DummyContent />
-            {/* Navbar */}
+            
+            
         </div>
     );
 }
