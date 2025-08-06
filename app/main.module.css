@@ -1,0 +1,22 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+.cardSection{
+    
+    display:  flex ;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+.sliderContainer{
+    height: 500px;
+    width: 90%;
+   
+}

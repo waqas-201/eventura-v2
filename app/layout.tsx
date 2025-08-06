@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Manrope, Urbanist } from "next/font/google";
 import "./globals.css";
+import { Button } from "@/components/ui/button";
+import { NavbarLp } from "@/components/landingPage/navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const urbanist = Urbanist({
+  variable: "--font-heading",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Manrope → For body text
+const manrope = Manrope({
+  variable: "--font-body",
   subsets: ["latin"],
+  display: "swap",
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${urbanist.variable} ${manrope.variable} antialiased`}
+
       >
+         <NavbarLp /> 
         {children}
       </body>
     </html>

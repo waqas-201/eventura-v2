@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { MobileNav, MobileNavHeader, MobileNavMenu, MobileNavToggle, Navbar, NavbarButton, NavbarLogo, NavBody, NavItems } from "./ui/AcNavbar";
+import { MobileNav, MobileNavHeader, MobileNavMenu, MobileNavToggle, Navbar, NavbarLogo, NavBody, NavItems } from "../ui/resizable-navbar";
+
 
 export function NavbarLp() {
     const navItems = [
@@ -20,9 +21,9 @@ export function NavbarLp() {
         {
             name: "About ",
             link: "#contact",
-        }, 
+        },
         {
-            name: "Contact", 
+            name: "Contact",
             link: "#contact",
         },
     ];
@@ -30,16 +31,16 @@ export function NavbarLp() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div className="relative w-full">
-            <Navbar>
+        <div className="relative w-full   ">
+            <Navbar >
                 {/* Desktop Navigation */}
-                <NavBody>
+                <NavBody   >
                     <NavbarLogo />
                     <NavItems items={navItems} />
-                    <div className="flex items-center gap-4">
+                    {/* <div className="flex items-center gap-4">
                         <NavbarButton variant="secondary">Login</NavbarButton>
                         <NavbarButton variant="primary">Book a call</NavbarButton>
-                    </div>
+                    </div> */}
                 </NavBody>
 
                 {/* Mobile Navigation */}
@@ -62,7 +63,7 @@ export function NavbarLp() {
                                 key={`mobile-link-${idx}`}
                                 href={item.link}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="relative text-neutral-600 dark:text-neutral-300"
+                                className="relative text-neutral-600 "
                             >
                                 <span className="block">{item.name}</span>
                             </a>
@@ -86,8 +87,8 @@ export function NavbarLp() {
                     </MobileNavMenu>
                 </MobileNav>
             </Navbar>
-            
-            
+
+
         </div>
     );
 }
