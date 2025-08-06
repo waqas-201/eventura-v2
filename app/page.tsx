@@ -10,7 +10,10 @@ export default function Home() {
   <main >
 
       {/* Hero - Full Bleed */}
+      <div>
+        
         <HeroVideo />
+      </div>
       
    
    <div className={`${styles.main} `}>
