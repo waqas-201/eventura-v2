@@ -7,24 +7,29 @@ import styles from './main.module.css'
 
 export default function Home() {
   return (
-  <main className={styles.main}>
+  <main >
 
       {/* Hero - Full Bleed */}
-         <section className="w-full h-full">
         <HeroVideo />
-      </section>
+      
+   
+   <div className={`${styles.main} `}>
+
 
       {/* Content Section */}
       <section className={`${styles.cardSection} `}>
           <ColorChangeCards />
         </section> 
       {/* Slider and Tagline Section */}
-      <div className=" w-full max-w-[1440px] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[100px] items-center px-4 sm:px-8 py-12">
+      <div className=" max-w-[1440px] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[100px] items-center px-4 sm:px-8 py-12">
         <SliderTagLine />
         <InfiniteSliderVertical />
       </div>
+   </div>
+        {/* Game changin section  */}
+      <section>
 
-
+      </section>
      
   </main>
         

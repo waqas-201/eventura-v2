@@ -12,11 +12,10 @@
     display:  flex ;
     align-items: center;
     justify-content: center;
-    width: 100%;
     
 }
 .sliderContainer{
     height: 500px;
-    width: 90%;
+    border : 1px solid red;
    
 }
