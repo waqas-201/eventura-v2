@@ -29,7 +29,7 @@ export const GameChanging = () => {
             <div className="flex justify-center md:justify-start">
                 <Button
                     variant="outline"
-                    className="rounded-full font-extrabold text-lg px-6 py-3 border-white border-2 hover:bg-white transition-all duration-300"
+                    className="rounded-full font-extrabold text-lg px-6 py-3 hover:bg-white transition-all duration-300"
                 >
                     More
                 </Button>
