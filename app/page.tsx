@@ -13,7 +13,7 @@ export default function Home() {
   return (
   <main >
       {/* Hero - Full Bleed */}
-        {/* <HeroVideo /> */}
+        <HeroVideo /> 
    <div className={`${styles.main} `}>
       {/* Content Section */}
       <section className="flex  w-[80%] items-center justify-center ">
