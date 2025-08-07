@@ -3,26 +3,24 @@ import { Button } from "../ui/button";
 
 
 
-export const GameChanging = () => {
+export const Pov = () => {
     return (
-        <div className="flex flex-col  items-start justify-baseline  h-full md:gap-6 gap-4  ">
+        <div className="flex flex-col   items-start justify-baseline  h-full md:gap-6 gap-4 order-1 md:order-2    ">
             {/* Heading */}
             <h1 className="font-extrabold text-3xl md:text-6xl text-center">
                 <div className="flex flex-col items-start gap-1">
-                    <span className="bg-primary/90 text-black px-2">Game-Changing </span>          
-                    <span className="bg-primary/90 text-black px-2">Experiences</span>
-                        
+                    <span className="bg-primary/90 text-black px-2">GPJ POV
+
+                    </span>
+
+
+
                 </div>
             </h1>
 
             {/* Paragraph */}
             <p className="text-lg leading-relaxed text-left">
-                Stronger brand affinity, deeper audience connections, tangible business growth and all the legendary moments – GPJ is  
-                <span className="font-semibold text-primary"> redefining </span> 
-                
-                
-                sports
-                experiences.
+                We see things differently. Get clear insight into everything experience from the world’s leading experts on experiential marketing and design.
             </p>
 
             {/* Button */}
@@ -34,7 +32,6 @@ export const GameChanging = () => {
                     More
                 </Button>
             </div>
-
         </div>
     );
 };
