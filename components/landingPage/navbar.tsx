@@ -31,7 +31,7 @@ export function NavbarLp() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div className="relative w-full   ">
+        <>
             <Navbar >
                 {/* Desktop Navigation */}
                 <NavBody   >
@@ -89,7 +89,7 @@ export function NavbarLp() {
             </Navbar>
 
 
-        </div>
+        </>
     );
 }
 

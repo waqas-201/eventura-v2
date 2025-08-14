@@ -3,6 +3,9 @@ import { Geist, Geist_Mono, Manrope, Urbanist } from "next/font/google";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
 import { NavbarLp } from "@/components/landingPage/navbar";
+import AnimatedCursor from "@/components/all/cursur";
+import LiquidCircleCursor from "@/components/all/cursur";
+import SmoothScroll from "@/providers/lenis-provider";
 
 const urbanist = Urbanist({
   variable: "--font-heading",
@@ -35,6 +38,8 @@ export default function RootLayout({
 
       >
          <NavbarLp /> 
+        <LiquidCircleCursor />
+        <SmoothScroll />
         {children}
       </body>
     </html>
