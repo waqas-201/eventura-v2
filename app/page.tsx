@@ -14,7 +14,7 @@ export default function Home() {
   <main className="flex flex-col items-center justify-center">
       {/* <HeroVideo />  */}
       <Hero />
-      <div className='w-[95%] sm:w-[88%] md:w-[80%]'>
+      <div className='w-[95%] sm:w-[88%] md:w-[75%]'>
         <PortfolioGrid />
         <VerticalSliderSection />
         <ExperienceSection />
