@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { TextRoll } from '../motion-primitives/text-roll';
 
 export default function MakersSection() {
     return (
@@ -15,9 +16,9 @@ export default function MakersSection() {
                     {/* Text Content */}
                     <div className="space-y-6 order-2 lg:order-1">
                         <div className="inline-block">
-                            <h2 className="bg-primary text-black text-2xl md:text-3xl lg:text-4xl font-bold px-6 py-3 inline-block">
+                            <TextRoll className="bg-primary text-black text-2xl md:text-3xl lg:text-4xl font-bold px-6 py-3 inline-block">
                                 MEET THE MAKERS
-                            </h2>
+                            </TextRoll>
                         </div>
                         <p className="text-base md:text-lg leading-relaxed max-w-lg text-gray-300">
                             Our experiences are made for and by humans. Meet some of the brilliant thinkers, designers and craftspeople who make us, us.
@@ -73,9 +74,9 @@ export default function MakersSection() {
                     {/* Text Content */}
                     <div className="space-y-6 order-2">
                         <div className="inline-block">
-                            <h2 className="bg-primary text-black text-2xl md:text-3xl lg:text-4xl font-bold px-6 py-3 inline-block">
+                            <TextRoll className="bg-primary text-black text-2xl md:text-3xl lg:text-4xl font-bold px-6 py-3 inline-block">
                                 EXPERIENCE AT HEART
-                            </h2>
+                            </TextRoll>
                         </div>
                         <p className="text-base md:text-lg leading-relaxed max-w-lg text-gray-300">
                             We are a community made up of people passionate about what we do. That passion manifests in all shapes and sizes, from those who sweat the details to those who dream big – and everywhere in between.

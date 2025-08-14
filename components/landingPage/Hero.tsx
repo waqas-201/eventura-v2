@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Play } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { useScroll, useTransform, motion } from "motion/react"
+import { TextScramble } from "../motion-primitives/text-scramble"
 
 export default function Hero() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -39,96 +40,93 @@ export default function Hero() {
     const y = useTransform(scrollYProgress, [0, 0.5, 1], ["0vh", "100vh", "150vh"])
 
     return (
-        <>
-            {/* Hero Section */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] }}
-                transition={{ duration: 5, delay: 0.5, ease: "easeInOut" }}
-                className="relative bg-cover bg-center min-h-screen h-screen w-full bg-black bg-[url('/Hero.png')] text-white overflow-hidden"
-            >
-                {/* Left-side blur overlay */}
-                <div className="absolute inset-0 pointer-events-none z-0">
-                    <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/40 via-transparent to-transparent backdrop-blur-[6px]" />
-                </div>
+        <motion.div
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="relative bg-cover bg-center min-h-screen h-screen w-full bg-black bg-[url('/Hero.psng')] text-white overflow-hidden"
+        >
+            {/* Left-side blur overlay */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+                <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/40 via-transparent to-transparent backdrop-blur-[6px]" />
+            </div>
 
-                <motion.div style={{ y }} className="relative h-full z-10">
-                    <div
-                        ref={heroRef}
-                        className="
-                            relative z-10 px-4 sm:px-6 lg:px-12
-                            pt-0 sm:pt-20 lg:pt-32
-                            flex flex-col justify-center sm:block
-                            min-h-screen
-                        "
-                    >
-                        <div className="max-w-7xl mx-auto">
-                            {/* Headline */}
-                            <div className="space-y-4 sm:space-y-8 mb-12 sm:mb-16">
-                                <h1 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-black leading-[0.85] tracking-tighter">
-                                    <div
-                                        className={`transition-all duration-1200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}
-                                        style={{ transitionDelay: "0.4s" }}
-                                    >
-                                        <span className="inline-block hover:scale-105 transition-transform duration-300 cursor-default">
-                                            WE
-                                        </span>{" "}
-                                        <span className="inline-block hover:scale-105 transition-transform duration-300 cursor-default text-[#00C3B4]">
-                                            CREATE
-                                        </span>
-                                    </div>
+            <motion.div style={{ y }} className="relative h-full z-10">
+                <div ref={heroRef} className="relative z-10 px-4 sm:px-6 lg:px-12 pt-16 sm:pt-20 lg:pt-32">
+                    <div className="max-w-7xl mx-auto">
+                        {/* Headline */}
+                        <div className="space-y-4 sm:space-y-8 mb-12 sm:mb-16">
+                            <h1 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-black leading-[0.85] tracking-tighter">
+                                <div className={`transition-all duration-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}>
+                                    <span className="inline-block hover:scale-105 transition-transform duration-300 cursor-default">
+                                        WE
+                                    </span>{" "}
+                                    <span className="inline-block hover:scale-105 transition-transform duration-300 cursor-default text-[#00C3B4]">
+                                        CREATE
+                                    </span>
+                                </div>
 
-                                    <div
-                                        className={`relative overflow-hidden transition-all duration-1200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}
-                                        style={{ transitionDelay: "0.7s", height: "1.2em" }}
-                                    >
-                                        {words.map((word, index) => (
-                                            <div
-                                                key={word}
-                                                className={`absolute inset-0 transition-all duration-700 ${index === currentWord
-                                                    ? "translate-y-0 opacity-100"
-                                                    : index < currentWord
-                                                        ? "-translate-y-full opacity-0"
-                                                        : "translate-y-full opacity-0"
-                                                    }`}
-                                            >
-                                                <span className="bg-gradient-to-r from-primary via-[#00C3B4] to-[#00C3B4] bg-clip-text text-transparent bg-[length:200%_100%] animate-[shimmer_2s_ease-in-out_infinite]">
-                                                    {word}
-                                                </span>
-                                            </div>
-                                        ))}
-                                    </div>
+                                <div className={`relative overflow-hidden transition-all duration-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`} style={{ height: "1.2em" }}>
+                                    {words.map((word, index) => (
+                                        <div
+                                            key={word}
+                                            className={`absolute inset-0 transition-all duration-700 ${index === currentWord
+                                                ? "translate-y-0 opacity-100"
+                                                : index < currentWord
+                                                    ? "-translate-y-full opacity-0"
+                                                    : "translate-y-full opacity-0"
+                                                }`}
+                                        >
+                                            <span className="bg-gradient-to-r from-primary via-[#00C3B4] to-[#00C3B4] bg-clip-text text-transparent bg-[length:200%_100%] animate-[shimmer_2s_ease-in-out_infinite]">
+                                                {word}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
 
-                                    <div
-                                        className={`transition-all duration-1200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}
-                                        style={{ transitionDelay: "1s" }}
-                                    >
-                                        <span className="inline-block transition-transform duration-300 cursor-default">
-                                            THAT
-                                        </span>{" "}
-                                        <span className="inline-block transition-transform duration-300 cursor-default relative">
-                                            MATTER
-                                        </span>
-                                    </div>
-                                </h1>
+                                <div className={`transition-all duration-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}>
+                                    <span className="inline-block transition-transform duration-300 cursor-default">
+                                        THAT
+                                    </span>{" "}
+                                    <span className="inline-block transition-transform duration-300 cursor-default relative">
+                                        MATTER
+                                    </span>
+                                </div>
+                            </h1>
 
-                                <p
-                                    className={`text-lg sm:text-xl lg:text-2xl xl:text-3xl text-gray-300 max-w-3xl leading-relaxed transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                                        }`}
-                                    style={{ transitionDelay: "1.3s" }}
-                                >
-                                    From corporate events to brand activations, we transform your vision into{" "}
-                                    <span className="text-[#00C3B4] font-semibold">unforgettable moments</span> that drive{" "}
-                                    <span className="text-[#00C3B4] font-semibold">real business results</span>.
+                            {/* Paragraph & TextScramble */}
+                            {isLoaded && (
+                                <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-gray-300 max-w-3xl leading-relaxed">
+                                    <TextScramble
+                                        duration={3}
+                                        characterSet=". "
+                                        trigger={true}
+                                        className="text-sm md:text-lg lg:text-2xl xl:text-3xl font-semibold text-gray-300"
+                                        chunks={[
+                                            { text: "From corporate events to brand activations, we transform your vision into " },
+                                            { text: "brand activations, ", color: "#00C3B4" },
+                                            { text: "we transform your vision into" },
+                                            { text: " unforgettable moments.", color: "#00C3B4" }
+                                        ]}
+                                    />
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 </p>
-                            </div>
+                            )}
+                        </div>
 
-                            {/* Buttons */}
-                            <div
-                                className={`flex flex-col sm:flex-row items-start gap-6 sm:gap-8 mb-16 sm:mb-24 transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                                    }`}
-                                style={{ transitionDelay: "1.5s" }}
-                            >
+                        {/* Buttons */}
+                        {isLoaded && (
+                            <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8 mb-16 sm:mb-24">
                                 <Button
                                     size="lg"
                                     className="group relative bg-gradient-to-r from-[#00C3B4] to-[#00C3B4]/80 hover:from-[#00C3B4]/90 hover:to-[#00C3B4]/70 text-black text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-8 h-auto rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#00C3B4]/25 border-2 border-[#00C3B4]/20 w-full sm:w-auto"
@@ -153,10 +151,10 @@ export default function Hero() {
                                     </div>
                                 </button>
                             </div>
-                        </div>
+                        )}
                     </div>
-                </motion.div>
+                </div>
             </motion.div>
-        </>
+        </motion.div>
     )
 }
