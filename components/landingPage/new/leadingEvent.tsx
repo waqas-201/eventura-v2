@@ -1,4 +1,3 @@
-import { TextScramble } from "@/components/motion-primitives/text-scramble"
 
 export const LeadingEvent = () => {
 
