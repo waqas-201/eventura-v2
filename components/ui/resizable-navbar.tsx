@@ -135,7 +135,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute   inset-0 z-10 h-full w-full rounded-full text-3xl bg-[#00C3B4]/60 pointer-events-none"
+              className="absolute  border border-primary    inset-0 z-10 h-full w-full rounded-full text-3xl pointer-events-none"
             />
 
           )}

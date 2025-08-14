@@ -9,16 +9,12 @@ export function Footer() {
                     {/* Logo Section */}
                     <div className="lg:col-span-4">
                         <div className="flex items-center space-x-3 mb-6 lg:mb-0">
-                            <div className="w-12 h-12 bg-teal-400 rounded-full flex items-center justify-center">
-                                <div className="text-black font-bold text-lg">GPJ</div>
-                            </div>
+
                             <div>
-                                <div className="text-white font-bold text-lg tracking-wide">
-                                    GEORGE P. JOHNSON
+                                <div className="text-primary font-extralight text-3xl tracking-wide">
+                                    EVENTURA
                                 </div>
-                                <div className="text-gray-400 text-sm">
-                                    experience marketing
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -136,16 +132,7 @@ export function Footer() {
                     </div>
 
                     {/* Project Network Section */}
-                    <div className="lg:col-span-2 flex flex-col items-start lg:items-end">
-                        <div className="text-right">
-                            <div className="text-gray-400 text-sm mb-2">
-                                Part of the Project network
-                            </div>
-                            <div className="text-white font-bold text-2xl tracking-wider">
-                                project
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
@@ -156,10 +143,10 @@ export function Footer() {
                         {/* Copyright */}
                         <div className="text-gray-400 text-xs md:text-sm text-center md:text-left max-w-2xl">
                             <p className="mb-1">
-                                Copyright ©2025 George P. Johnson. All rights reserved. A Project Worldwide Agency.
+                                Copyright ©2025 Eventura. All rights reserved. A Project Worldwide Agency.
                             </p>
                             <p>
-                                George P. Johnson and its logo are registered trademarks of Project.
+                                Eventura and its logo are registered trademarks of Project.
                             </p>
                         </div>
 

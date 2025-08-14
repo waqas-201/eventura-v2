@@ -1,36 +1,19 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
+
+
 export default function PortfolioGrid() {
+
     return (
-        <section className="bg-black py-12 md:py-20">
+        <section className="bg-black py-12 md:py-20 hidden md:block">
             <div className="mx-auto">
                 <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
-                    {/* Meta Project */}
+
+
                     <div className="group relative aspect-[16/9] cursor-pointer overflow-hidden rounded-lg">
                         <Image
-                            src="/circular-tech-exhibition.png"
-                            alt="Meta exhibition space"
-                            width={1280}
-                            height={720}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className="h-full w-full object-cover transition-all duration-500 group-hover:grayscale-0"
-                        />
-                        {/* Logo - stays on right */}
-                        <div className="absolute bottom-4 right-4 z-20">
-                            <div className="rounded bg-black/50 px-3 py-2 text-xl font-bold text-white">Meta</div>
-                        </div>
-                        {/* Sliding card from logo */}
-                        <div className="absolute bottom-4 right-4 z-10 transform translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0">
-                            <div className="min-w-[180px] rounded-lg bg-black/90 px-4 py-2 backdrop-blur-sm">
-                                <h3 className="text-base font-semibold text-white">Meta Conversations</h3>
-                            </div>
-                        </div>
-                    </div>
-                    {/* IBM Think Project */}
-                    <div className="group relative aspect-[16/9] cursor-pointer overflow-hidden rounded-lg">
-                        <Image
-                            src="/interactive-think-display.png"
+                            src="/eventCard.png"
                             alt="IBM Think interactive display"
                             width={1280}
                             height={720}
@@ -46,10 +29,35 @@ export default function PortfolioGrid() {
                             </div>
                         </div>
                     </div>
+
+
+
+                    {/* IBM Think Project */}
+                    <div className="group relative aspect-[16/9] cursor-pointer overflow-hidden rounded-lg">
+                        <Image
+                            src="/eventCard.png"
+                            alt="IBM Think interactive display"
+                            width={1280}
+                            height={720}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="h-full w-full object-cover transition-all duration-500 group-hover:grayscale-0"
+                        />
+                        <div className="absolute bottom-4 right-4 z-20">
+                            <div className="rounded bg-black/50 px-3 py-2 text-xl font-bold text-white">IBM</div>
+                        </div>
+                        <div className="absolute bottom-4 right-4 z-10 transform translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0">
+                            <div className="min-w-[180px] rounded-lg bg-black/90 px-4 py-2 backdrop-blur-sm">
+                                <h3 className="text-base font-semibold text-white">Think Interactive Experience</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                     {/* Cricket World Cup Project */}
                     <div className="group relative aspect-[16/9] cursor-pointer overflow-hidden rounded-lg">
                         <Image
-                            src="/cricket-stadium-event.png"
+                            src="/eventCard.png"
                             alt="DP World ICC Cricket World Cup"
                             width={1280}
                             height={720}
@@ -68,12 +76,12 @@ export default function PortfolioGrid() {
                     {/* DP World Tour Project */}
                     <div className="group relative aspect-[16/9] cursor-pointer overflow-hidden rounded-lg">
                         <Image
-                            src="/outdoor-golf-event.png"
+                            src="/eventCard.png"
                             alt="DP World Tour event"
                             width={1280}
                             height={720}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className="h-full w-full object-cover transition-all duration-500 group-hover:grayscale-0"
+                            className="h-full w-full object-cover grayscale-75 transition-all duration-500 group-hover:grayscale-0"
                         />
                         <div className="absolute bottom-4 right-4 z-20">
                             <div className="rounded bg-black/50 px-3 py-2 text-xs font-bold text-white">DP WORLD TOUR</div>
@@ -87,7 +95,7 @@ export default function PortfolioGrid() {
                     {/* Adobe Conference Project */}
                     <div className="group relative aspect-[16/9] cursor-pointer overflow-hidden rounded-lg">
                         <Image
-                            src="/adobe-conference-presentation.png"
+                            src="/eventCard.png"
                             alt="Adobe conference space"
                             width={1280}
                             height={720}
@@ -120,6 +128,9 @@ export default function PortfolioGrid() {
                             </Button>
                         </div>
                     </div>
+
+
+
                 </div>
             </div>
         </section>

@@ -3,13 +3,15 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { MotionButton } from '@/components/ui/motionButton';
 
 export function ExperienceSection() {
     return (
         <section className="bg-black text-white py-12 md:py-20">
             <div className="container mx-auto">
                 {/* First Row - Game Changing Experiences */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 mb-12 md:mb-20 lg:mb-24">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] gap-8 lg:gap-12 xl:gap-16 mb-12 md:mb-20 lg:mb-24">
+
                     {/* Left Content */}
                     <div className="flex flex-col justify-center space-y-6 order-2 lg:order-1">
                         <div className="space-y-4">
@@ -26,63 +28,55 @@ export function ExperienceSection() {
                             </p>
                         </div>
                         <div>
-                            <Button
+                            <MotionButton
                                 variant="outline"
-                                className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-2 text-sm font-medium transition-all duration-300"
+                                className="border-white text-white hover:bg-black hover:text-white rounded-full px-8 py-2 text-sm font-medium transition-all duration-300"
                             >
                                 MORE
-                            </Button>
+                            </MotionButton>
                         </div>
                     </div>
-                    {/* Right Image with animated border (right to left) */}
-                    <div className="order-1 lg:order-2 relative z-10">
-                        <motion.div
-                            className="absolute inset-0 border-2 border-primary rounded-lg pointer-events-none"
-                            initial={{ x: 20, y: 100 }}
-                            animate={{ x: -20, y: 0 }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatType: 'reverse',
-                                ease: 'easeInOut',
-                            }}
-                        />
-                        <div className="relative aspect-video lg:aspect-[4/3] rounded-lg overflow-hidden border-2 border-transparent">
+
+                    {/* Right Image with animated border */}
+                    <div className="order-1 lg:order-2 relative z-10 w-full lg:max-w-[600px] mx-auto">
+                        <div className="relative aspect-video lg:aspect-[4/2.3] rounded-lg overflow-hidden border-2 border-transparent">
                             <Image
-                                src="/cheering-sports-crowd.png"
+                                src="/eventCard.png"
                                 alt="Sports event crowd"
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-[10px] "
                             />
-                           
                         </div>
+                        <motion.div
+                            initial={{ x: 0, y: 0 }}
+                            whileInView={{ x: 18, y: -18 }}
+                            transition={{ ease: "easeInOut", duration: 1.5, delay: 0.5 }}
+                            className="absolute  rounded-[10px]  inset-0 border-3 border-primary  z-50 pointer-events-none"
+                        />
                     </div>
                 </div>
+
                 {/* Second Row - GPJ POV */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
-                    {/* Left Image with animated border (left to right) */}
-                    <div className="order-1 relative">
-                        <motion.div
-                            className="absolute inset-0 border-2 border-teal-400 rounded-lg pointer-events-none"
-                            initial={{ x: -20 }}
-                            animate={{ x: 20 }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatType: 'reverse',
-                                ease: 'easeInOut',
-                            }}
-                        />
-                        <div className="relative aspect-video lg:aspect-[4/3] rounded-lg overflow-hidden border-2 border-transparent">
+                <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1fr] gap-8 lg:gap-12 xl:gap-16">
+
+                    {/* Left Image with animated border */}
+                    <div className="order-1 relative w-full lg:max-w-[600px] mx-auto">
+                        <div className="relative aspect-video lg:aspect-[4/2.3] rounded-lg overflow-hidden border-2 border-transparent">
                             <Image
-                                src="/abstract-geometric-shapes.png"
+                                src="/eventCard.png"
                                 alt="Abstract geometric pattern"
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-[10px]"
                             />
-                            
                         </div>
+                        <motion.div
+                            initial={{ x: 0, y: 0 }}
+                            whileInView={{ x: -18, y: -18 }}
+                            transition={{ ease: "easeInOut", duration: 1.5, delay: 0.5 }}
+                            className="absolute  z-50 rounded-[10px] inset-0 border-3 border-teal-400  pointer-events-none"
+                        />
                     </div>
+
                     {/* Right Content */}
                     <div className="flex flex-col justify-center space-y-6 order-2">
                         <div className="space-y-4">
