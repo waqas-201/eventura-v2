@@ -1,3 +1,5 @@
+import { TextScramble } from "@/components/motion-primitives/text-scramble"
+
 export const LeadingEvent = () => {
 
 
@@ -5,9 +7,11 @@ export const LeadingEvent = () => {
             <div className=" mx-auto text-center ">
 
                 <h1 className="text-white text-2xl py-8 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-wide">
-                    GPJ IS THE WORLD'S LEADING EVENT AND
+
+                EVENTURA IS THE WORLD'S LEADING 
+
                     <br className="hidden sm:block" />
-                    EXPERIENTIAL MARKETING AGENCY.
+                EVENT AND  EXPERIENTIAL MARKETING AGENCY.
                 </h1>
 
                 <h2 className="text-primary text-xl py-8 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-wide">

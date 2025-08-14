@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { TextRoll } from "@/components/motion-primitives/text-roll";
 
 export default function JoinUsSection() {
     return (
@@ -12,9 +13,9 @@ export default function JoinUsSection() {
                     {/* Left Content Area */}
                     <div className="space-y-6 order-2 lg:order-1">
                         <div className="inline-block">
-                            <h2 className="bg-primary text-black text-2xl md:text-3xl lg:text-4xl font-bold  px-6 py-3 inline-block">
+                            <TextRoll className="bg-primary text-black text-2xl md:text-3xl lg:text-4xl font-bold  px-6 py-3 inline-block">
                                 JOIN US
-                            </h2>
+                            </TextRoll>
                         </div>
                         <p className="text-white text-base md:text-lg leading-relaxed max-w-lg">
                             People are at the center of everything we do. If you're looking for a dynamic opportunity for creativity and growth – we should talk.

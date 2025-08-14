@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { MotionButton } from '@/components/ui/motionButton';
+import { TextRoll } from '@/components/motion-primitives/text-roll';
 
 export function ExperienceSection() {
     return (
@@ -17,7 +18,10 @@ export function ExperienceSection() {
                         <div className="space-y-4">
                             <div className="inline-block">
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
-                                    <span className="bg-primary text-black px-2 py-1">GAME-CHANGING</span>
+                                    <TextRoll className="bg-primary text-black px-2 py-1">
+
+                                        GAME-CHANGING
+                                    </TextRoll>
                                     <br />
                                     <span className="text-white">EXPERIENCES</span>
                                 </h2>
@@ -82,7 +86,7 @@ export function ExperienceSection() {
                         <div className="space-y-4">
                             <div className="inline-block">
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
-                                    <span className="bg-teal-400 text-black px-2 py-1">GPJ POV</span>
+                                    <TextRoll className="bg-teal-400 text-black px-2 py-1">GPJ POV</TextRoll>
                                 </h2>
                             </div>
                             <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-lg">

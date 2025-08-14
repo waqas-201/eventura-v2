@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimatedLogoGrid } from "@/components/animated-logo-grid";
+import { TextRoll } from "@/components/motion-primitives/text-roll";
 import { motion } from "motion/react";
 
 export default function VerticalSliderSection() {
@@ -15,8 +16,8 @@ export default function VerticalSliderSection() {
                             GPJ is the World's Leading Strategic Experience Marketing Agency
                         </span>
                         <span className="block">GPJ IS THE</span>
-                        <span className="block text-primary">WORLD&apos;S</span>
-                        <span className="block text-primary">LEADING</span>
+                        <TextRoll className="block text-primary">WORLD&apos;S</TextRoll>
+                        <TextRoll className="block text-primary">LEADING</TextRoll>
                         <span className="block">STRATEGIC</span>
                         <span className="block">EXPERIENCE</span>
                         <span className="block">MARKETING</span>

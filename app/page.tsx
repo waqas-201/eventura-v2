@@ -8,6 +8,7 @@ import { LeadingEvent } from "@/components/landingPage/new/leadingEvent";
 import VerticalSliderSection from "@/components/landingPage/new/verticalLogoSection";
 import MakersSection from "@/components/landingPage/makersection";
 import Hero from "@/components/landingPage/Hero";
+import { TextScramble } from '@/components/motion-primitives/text-scramble';
 
 export default function Home() {
   return (
@@ -22,7 +23,8 @@ export default function Home() {
         <MakersSection />
         <JoinUsSection />
         {/* <CarouselSection/> */}
-        <Footer/>
+        <Footer />
+
    </div>
   </main>
         
