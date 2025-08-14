@@ -50,11 +50,18 @@ export default function Hero() {
             </div>
 
             <motion.div style={{ y }} className="relative h-full z-10">
-                <div ref={heroRef} className="relative z-10 px-4 sm:px-6 lg:px-12 pt-16 sm:pt-20 lg:pt-32">
-                    <div className="max-w-7xl mx-auto">
+                {/* Main container */}
+                <div
+                    ref={heroRef}
+                    className="relative z-10 px-4 sm:px-6 lg:px-12 pt-16 sm:pt-20 lg:pt-32
+                               min-h-screen flex flex-col justify-center items-center text-center
+                               lg:items-start lg:text-left"
+                >
+                    <div className="max-w-7xl mx-auto w-full">
                         {/* Headline */}
                         <div className="space-y-4 sm:space-y-8 mb-12 sm:mb-16">
-                            <h1 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-black leading-[0.85] tracking-tighter">
+                            <h1 className={`font-black leading-[0.85] tracking-tighter
+                                            text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl`}>
                                 <div className={`transition-all duration-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}>
                                     <span className="inline-block hover:scale-105 transition-transform duration-300 cursor-default">
                                         WE
@@ -94,7 +101,7 @@ export default function Hero() {
 
                             {/* Paragraph & TextScramble */}
                             {isLoaded && (
-                                <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-gray-300 max-w-3xl leading-relaxed">
+                                <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl text-gray-300 max-w-3xl leading-relaxed mx-auto lg:mx-0">
                                     <TextScramble
                                         duration={3}
                                         characterSet=". "
@@ -107,26 +114,13 @@ export default function Hero() {
                                             { text: " unforgettable moments.", color: "#00C3B4" }
                                         ]}
                                     />
-
-
-
-
-
-
-
-
-
-
-
-
-
                                 </p>
                             )}
                         </div>
 
                         {/* Buttons */}
                         {isLoaded && (
-                            <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8 mb-16 sm:mb-24">
+                            <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 mb-16 sm:mb-24 w-full justify-center lg:justify-start">
                                 <Button
                                     size="lg"
                                     className="group relative bg-gradient-to-r from-[#00C3B4] to-[#00C3B4]/80 hover:from-[#00C3B4]/90 hover:to-[#00C3B4]/70 text-black text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-8 h-auto rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#00C3B4]/25 border-2 border-[#00C3B4]/20 w-full sm:w-auto"
